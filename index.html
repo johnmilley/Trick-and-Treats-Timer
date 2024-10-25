@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎃 Tricks and Treats 🎃</title>
+  <style>
+    body {
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: rgb(31, 28, 29);
+      color: rgb(208,195,143);
+      text-align: center;
+    }
+    
+    #timer-controls {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        height: 10%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        margin-top: 10vh;
+    }
+
+    main img {
+        width: 60%;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+    
+
+    .controls {
+      display: none; /* Hidden by default */
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      background-color: rgba(28, 28, 28, 0.9); /* Semi-transparent background */
+      padding: 10px;
+      border-radius: 5px;
+      color: #ffa500;
+    }
+    #toggle-button {
+      margin-top: 10px;
+      cursor: pointer;
+      background-color: #ffa500;
+      color: rgba(28, 28, 28, 0.9);
+      padding: 10px 20px;
+      border: none;
+      font-size: 1em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    
+    <section id="timer-controls">
+
+        <button id="toggle-button" onclick="toggleControls()">Show Controls</button>
+        
+        <div class="controls" id="controls">
+            <label for="interval">Set countdown (minutes): </label>
+            <input type="number" id="interval" value="15" min="1" />
+        <button onclick="updateInterval()">Set Timer</button>
+        </div>
+    </section>
+
+    <main>
+
+        <h1>Next quiz show starting in <span id="timer">15:00</span> minutes</h1>
+        <img src="young_frank_einsteins_sign.png" alt="decorative sign with the event name, Young Frank-einsteins, and the Let's Talk Science and Grenfell Campus logos">
+    </main>
+  
+
+  <script src="timer.js"></script>
+</body>
+</html>
