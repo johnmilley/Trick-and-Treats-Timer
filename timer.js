@@ -12,7 +12,7 @@ function startCountdown(intervalMinutes) {
     // If time is up, reset the countdown
     if (timeRemaining <= 0) {
       clearInterval(countdownTimer);
-      startCountdown(intervalMinutes); // Restart countdown
+      // startCountdown(intervalMinutes);
     } else {
       // Calculate minutes and seconds
       const minutes = Math.floor((timeRemaining / 1000) / 60);

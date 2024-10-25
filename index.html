@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🎃 Tricks and Treats 🎃</title>
   <style>
+
+    :root {
+      box-sizing: border-box;
+    }
     body {
       height: 100vh;
       font-family: Arial, sans-serif;
       background-color: rgb(31, 28, 29);
       color: rgb(208,195,143);
-      text-align: center;
+      overflow: hidden;
     }
     
-    #timer-controls {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        height: 10%;
+    header {
+      height: 10vh;
     }
 
     main {
@@ -25,8 +26,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 90vh;
-        margin-top: 10vh;
+        height: 80vh;
     }
 
     main img {
@@ -36,25 +36,21 @@
     h1 {
       font-size: 3em;
     }
-    
 
     .controls {
-      display: none; /* Hidden by default */
-      position: absolute;
-      top: 50px;
-      left: 10px;
-      background-color: rgba(28, 28, 28, 0.9); /* Semi-transparent background */
+      display: none;
+      /* background-color: rgba(28, 28, 28, 0.9); */
       padding: 10px;
       border-radius: 5px;
-      color: #ffa500;
+      color: rgb(208,195,143);
     }
     #toggle-button {
       margin-top: 10px;
       cursor: pointer;
-      background-color: #ffa500;
-      color: rgba(28, 28, 28, 0.9);
+      background-color: rgba(28, 28, 28, 0.9);
+      border: 2px solid rgb(208,195,143);
+      color: rgb(208,195,143);
       padding: 10px 20px;
-      border: none;
       font-size: 1em;
       font-weight: bold;
     }
@@ -62,7 +58,7 @@
 </head>
 <body>
     
-    <section id="timer-controls">
+    <header>
 
         <button id="toggle-button" onclick="toggleControls()">Show Controls</button>
         
@@ -71,7 +67,7 @@
             <input type="number" id="interval" value="15" min="1" />
         <button onclick="updateInterval()">Set Timer</button>
         </div>
-    </section>
+      </header>
 
     <main>
 
